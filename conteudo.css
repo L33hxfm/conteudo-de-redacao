@@ -1,0 +1,157 @@
+    /* Reset básico */
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    /* Corpo e background */
+    body {
+        background-color: #F0EFEA;
+        display: grid;
+        /* Remover margin-top que estava empurrando a header para baixo */
+        margin-bottom: 50px; /* Adiciona 50px de espaço no final da página */
+    }
+    
+    /* Estilo da header */
+    .header {
+        background-image: linear-gradient(to right, rgb(51, 0, 80), rgb(82, 4, 128));
+        color: white;
+        position: fixed;
+        z-index: 1000; 
+        height: 100px;
+        width: 100%;
+        padding: 20px ;
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    } 
+    
+    .titulo   {
+        color: white;
+        display: flex;
+        /* Usa o modelo de layout flexível para o logotipo */
+        margin-top: auto;
+        /* Alinha o logotipo ao centro verticalmente */
+        margin-bottom: auto;
+        margin-left: 10%;
+        /* Define uma margem à esquerda */
+        text-align: left;
+        /* Alinha o texto do logotipo à esquerda */
+        align-items: center;
+        /* Alinha os itens verticalmente ao centro */
+    } 
+    
+    .header a{
+        color: #fff;
+        display: flex;
+        /* Usa o modelo de layout flexível para o logotipo */
+        margin-top: auto;
+        /* Alinha o logotipo ao centro verticalmente */
+        margin-bottom: auto;
+        margin-left: 40%;
+        /* Define uma margem à esquerda */
+        text-align: right;
+        /* Alinha o texto do logotipo à esquerda */
+        align-items: center;
+        /* Alinha os itens verticalmente ao centro */
+    }
+    
+    .header a:hover {
+        color: #18cf00;
+    }
+    
+    /* A posição de header já foi ajustada, logo, o conteúdo principal pode ficar abaixo */
+.main, .main-nomes {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 10px; /* Ajuste para o espaço entre a header e o conteúdo */
+    line-height: 1.6;
+}
+
+/* Adicionando o espaço mínimo de 50px na base do site */
+body {
+    background-color: #F0EFEA;
+    display: grid;
+    margin-bottom: 50px; /* Adiciona 50px de espaço no final da página */
+}
+
+/* Ajuste de margens no conteúdo */
+h2, p {
+    margin-bottom: 20px;
+}
+
+/* Ajuste para o conteúdo abaixo da header */
+.main h2, .main-nomes h2 {
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Ajustes adicionais em parágrafos */
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 1.1rem;
+    margin-bottom: 10px; /* Distancia mais os itens da lista */
+}   
+
+/* Bloco de citação */
+blockquote {
+    font-style: italic;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+    
+    /* Links */
+    a {
+        color: #3498db;
+    }
+    
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .buttons-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+        }
+        .button-card-nomes {
+        width: 80%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .header a {
+        margin-left: 10%;
+        }
+    
+        .header p {
+        margin-left: 5%;
+        }
+    
+        .buttons-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        }
+    
+        .button-card-nomes {
+        width: 90%;
+        }
+    }
+    
